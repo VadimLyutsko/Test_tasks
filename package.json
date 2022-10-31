@@ -1,6 +1,6 @@
 {
   "name": "my-app",
-  "homepage": "https://github.com/VadimLyutsko/ToDo_For_Mindbox",
+  "homepage": "https://VadimLyutsko.github.io/ToDo_For_Mindbox",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
