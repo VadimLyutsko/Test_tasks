@@ -5,17 +5,17 @@ type AddItemFormPropsType = {
     addItem: (title: string) => void
 }
 
-export const AddItemForm: React.FC<AddItemFormPropsType> = ({addItem}) => {
-    const [title, setTitle] = useState<string>('');
+export const AddItemForm = ({addItem}: AddItemFormPropsType) => {
+    const [title, setTitle] = useState('');
 
     const onChangeSetLocalTitle = (e: ChangeEvent<HTMLInputElement>) => {
-        setTitle(e.currentTarget.value);
+        setTitle(e.target.value);
     };
     const onEnterDownAddItem = (e: KeyboardEvent<HTMLInputElement>) => e.key === 'Enter' && addNewItem();
 
     const addNewItem = () => {
         const trimmedTitle = title.trim();
-        if (trimmedTitle !== '') {
+        if (trimmedTitle) {
             addItem(trimmedTitle);
         }
         setTitle('');

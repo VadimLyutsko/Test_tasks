@@ -49,7 +49,7 @@ export const TodoList = (props: TodoListPropsType) => {
 
 
     return (
-        <div>
+        <div >
             <Typography variant={'h4'} align={'center'}>
                 <span>{props.title}</span>
             </Typography>
