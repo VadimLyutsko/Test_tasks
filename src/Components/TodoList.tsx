@@ -1,7 +1,7 @@
 import React, {ChangeEvent} from 'react';
 import {FilterValuesType} from './App/App';
 import {AddItemForm} from './AddItemForm/AddItemForm';
-import {Button, ButtonGroup, Checkbox, List, ListItem, Typography} from '@material-ui/core';
+import {Button, ButtonGroup, Checkbox, List, ListItem, Typography} from '@mui/material';
 
 type TodoListPropsType = {
     title: string
@@ -81,7 +81,7 @@ export const TodoList = (props: TodoListPropsType) => {
                     >Completed
                     </Button>
                 </ButtonGroup>
-                <span onClick={props.ClearCompletedTasks} style={{marginLeft: '20px'}}>Clear completed</span>
+                <span onClick={props.ClearCompletedTasks} style={{marginLeft: '20px', cursor:'pointer'}}>Clear completed</span>
             </div>
         </div>
     );

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import  {TaskType,TodoList} from '../TodoList';
 import {v1} from 'uuid';
-import {Container, Grid, Paper} from '@material-ui/core';
+import {Container, Grid, Paper} from '@mui/material';
 
 
 export type FilterValuesType = 'all' | 'active' | 'completed'
