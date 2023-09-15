@@ -1,6 +1,8 @@
 .App{
-    margin-top: 250px  ;
     padding: 10px;
+    max-width: 500px;
+    margin: 200px auto 0;
+    border:  solid 1px #dededf;
 }
 
 .isDone {
@@ -12,3 +14,4 @@
     font-weight: bold;
     color: #8fcb5d;
 }
+

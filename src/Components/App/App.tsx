@@ -51,14 +51,6 @@ function App() {
 
     return (
         <div className="App">
-
-            <Container fixed>
-                <Grid container>
-                    <Grid item>
-                        <Paper
-                            variant={'outlined'}
-                            // elevation={10}
-                            style={{width: '470px', padding: '20px', marginLeft: '300px'}}>
                             <TodoList
                                 filter={filter}
                                 tasks={getFilteredTasks(tasks, filter)}
@@ -68,10 +60,7 @@ function App() {
                                 changeFilter={setFilter}
                                 ClearCompletedTasks={ClearCompletedTasks}
                             />
-                        </Paper>
-                    </Grid>
-                </Grid>
-            </Container>
+
         </div>
     );
 }

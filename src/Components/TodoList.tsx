@@ -39,7 +39,7 @@ export const TodoList = (props: TodoListPropsType) => {
 
     const tasksList = props.tasks.length
         ? <List>{props.tasks.map(getTasksListItem)}</List>
-        : <span>All tasks completed</span>;
+        : <div style={{width:'50%' ,margin: 'auto', textAlign:'center', padding:"25px"}}>All tasks completed</div>;
 
     const addTask = (title: string) => {
         props.addTask(title);
