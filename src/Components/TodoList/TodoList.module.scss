@@ -1,5 +1,11 @@
 @import '../../styles/variables.module.scss';
 
+.title {
+  font-weight: 100;
+  font-size: 48px;
+  color: $title-color;
+}
+
 .isDone {
   text-decoration: line-through;
   text-decoration-color: $gray-color;
@@ -28,7 +34,6 @@
 }
 
 .button {
-  // font-size: 32px;
   @media screen and (max-width: $table) {
     font-size: 10px;
   }
@@ -40,6 +45,7 @@
 
 .clearButton,
 .leftTasks {
+  display: flex;
   text-align: center;
   font-size: 18px;
   @media screen and (max-width: $table) {
@@ -53,6 +59,20 @@
   @media screen and (max-width: $breakpoint_385px) {
     font-size: 10px;
   }
+}
+
+.leftTasks {
+  margin-right: 5px;
+}
+
+.displayNone {
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.clearButton {
+  margin-left: 5px;
 }
 
 .emptyList {

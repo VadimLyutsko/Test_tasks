@@ -6,7 +6,7 @@ import { Container } from '../Container/Container';
 import { FilterValuesType, TaskType, TasksStateType } from '../../Types/types';
 
 function App() {
-  const todoListTitle = 'Todos';
+  const todoListTitle = 'todos';
   const [filter, setFilter] = useState<FilterValuesType>('all');
   const [tasks, setTasks] = useState<TasksStateType>([
     { id: v1(), title: 'Milk', isDone: false },

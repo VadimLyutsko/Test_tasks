@@ -38,7 +38,7 @@ export const TodoList = (props: TodoListPropsType) => {
   return (
     <div>
       <Typography variant={'h4'} align={'center'}>
-        <span>{props.title}</span>
+        <span className={styles.title}>{props.title}</span>
       </Typography>
 
       <div>
@@ -46,11 +46,14 @@ export const TodoList = (props: TodoListPropsType) => {
       </div>
       {tasksList}
       <div className={styles.controlPanel}>
-        <span className={styles.leftTasks}>{`${props.tasks.filter((i) => !i.isDone).length} items left`}</span>
+        <span className={styles.leftTasks}>
+          {`${props.tasks.filter((i) => !i.isDone).length}`}&nbsp;
+          <span className={styles.displayNone}>{`items`}&nbsp;</span>left
+        </span>
         <ButtonGroup disableElevation variant="contained" size={'small'}>
           <Button
             className={styles.button}
-            style={{ marginRight: '5px', borderRadius: '10px' }}
+            style={{ marginRight: '5px', borderRadius: '10px', fontFamily: 'Poppins,sans-serif' }}
             color={props.filter === 'all' ? 'primary' : 'secondary'}
             onClick={handlerCreator('all')}
           >
@@ -58,7 +61,7 @@ export const TodoList = (props: TodoListPropsType) => {
           </Button>
           <Button
             className={styles.button}
-            style={{ marginRight: '5px', borderRadius: '10px' }}
+            style={{ marginRight: '5px', borderRadius: '10px', fontFamily: 'Poppins,sans-serif' }}
             color={props.filter === 'active' ? 'primary' : 'secondary'}
             onClick={handlerCreator('active')}
           >
@@ -66,7 +69,7 @@ export const TodoList = (props: TodoListPropsType) => {
           </Button>
           <Button
             className={styles.button}
-            style={{ borderRadius: '10px' }}
+            style={{ borderRadius: '10px', fontFamily: 'Poppins,sans-serif' }}
             color={props.filter === 'completed' ? 'primary' : 'secondary'}
             onClick={handlerCreator('completed')}
           >

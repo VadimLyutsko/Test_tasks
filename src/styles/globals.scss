@@ -5,6 +5,7 @@
   padding: 0px;
   margin: 0px;
   border: none;
+  font-family: 'Poppins', sans-serif;
 }
 
 *,
@@ -109,4 +110,8 @@ label {
 
 legend {
   display: block;
+}
+
+.displayNone {
+  display: none;
 }
